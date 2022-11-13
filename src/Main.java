@@ -17,7 +17,10 @@ public class Main { public static void main(String[] args) {
     int distance = 200;
     int never = fur(distance);
 
-    
+//  4 задание
+
+    char[] word = {'w','3','s','c','h','o','o','l','s'};
+    int lolec = fear(word);
 
 }
 
@@ -64,7 +67,25 @@ public class Main { public static void main(String[] args) {
         } else if (deliveryDistance >= 0) {
             System.out.println("Потребуется дней: 1");
         }
+
         return fur;
     }
 
+    public static int fear(char[] argu) {
+        char[] fear = argu;
+        String str = "w3schools";
+        int cnt = 0;
+        char[] inp = str.toCharArray();
+        System.out.println("Duplicate Characters are:");
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j < str.length(); j++) {
+                if (inp[i] == inp[j]) {
+                    System.out.println(inp[j]);
+                    cnt++;
+                    break;
+                }
+            }
+        }
+        return cnt;
+    }
 }
